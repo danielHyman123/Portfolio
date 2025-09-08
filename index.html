@@ -3,94 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Engineering Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-
-    header {
-      background: #0a192f;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    nav {
-      margin-top: 0.5rem;
-    }
-
-    nav a {
-      color: #64ffda;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-
-    .section h2 {
-      border-bottom: 2px solid #0a192f;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .project {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-
-    .project:hover {
-      transform: translateY(-4px);
-    }
-
-    .project img {
-      max-width: 100%;
-      border-radius: 5px;
-      margin-top: 0.5rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #0a192f;
-      color: #fff;
-      margin-top: 2rem;
-    }
-  </style>
+  <title>Daniel Hyman Portfolio</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <header>
-    <h1>My Engineering Portfolio</h1>
-    <nav>
-      <a href="#cad">CAD</a>
-      <a href="#arduino">Arduino</a>
-      <a href="#coding">Coding</a>
-    </nav>
-  </header>
+<section class="hero">
+    <div class="hero-content">
+      <h1>Daniel Hyman</h1>
+    <div class="text-container">
+        <div class="cycling-text" id="cyclingText"></div>
+    </div>
+      <header>
+        <nav>
+            <a href="#cad">CAD</a>
+            <a href="#arduino">Arduino</a>
+            <a href="#coding">Coding</a>
+        </nav>
+    </header>
+    </div>
+  </section>
 
   <section class="section" id="cad">
     <h2>CAD Projects</h2>
     <div class="project">
-      <h3>Example CAD Project</h3>
-      <p>Brief description of what you designed, tools used (e.g., SolidWorks, Fusion 360), and what you learned.</p>
+      <h3>Pump Pulley</h3>
+      <p>Designed on Onshape. Learnt loads about CAD Software</p>
+      <img src="cad-example.png" alt="CAD project image">
+    </div>
+
+    <div class="project">
+      <h3>Robot Arm</h3>
+      <p>Designed on Onshape. Learnt loads about CAD Software</p>
+      <img src="cad-example.png" alt="CAD project image">
+    </div>
+
+    <div class="project">
+      <h3>Gear</h3>
+      <p>Designed on Onshape. Learnt loads about CAD Software</p>
       <img src="cad-example.png" alt="CAD project image">
     </div>
   </section>
@@ -98,8 +47,14 @@
   <section class="section" id="arduino">
     <h2>Arduino Projects</h2>
     <div class="project">
-      <h3>Joystick-Controlled Servo</h3>
-      <p>Arduino project where I used a joystick to control a servo motor. Learned about analogRead, PWM signals, and serial debugging.</p>
+      <h3>Autonomous Car</h3>
+      <p>A Car designed to overcome 3 pre-defined chalanges.</p>
+      <img src="arduino-example.png" alt="Arduino project photo">
+    </div>
+
+    <div class="project">
+      <h3>Robotic Arm</h3>
+      <p>Ongoing project to design a ESP32 powered Arm, able to twist in any direction.</p>
       <img src="arduino-example.png" alt="Arduino project photo">
     </div>
   </section>
@@ -107,14 +62,36 @@
   <section class="section" id="coding">
     <h2>Coding Projects</h2>
     <div class="project">
-      <h3>Java Chat App</h3>
-      <p>A simple client-server chat application written in Java using sockets. Later I extended it with WebSockets for web integration.</p>
+      <h3>Trackify Chrome Extention</h3>
+      <p>This Chrome Extension allows users to bookmark sentences, webpages, and images, as well as take notes to remember and come back to them later.</p>
       <a href="https://github.com/yourusername/chat-app" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>Weather Safety Application</h3>
+      <p>A full-stack Django web application that allows users to track their friends' 
+        locations in real-time and alerts them if those friends are within or near current disaster zones. 
+        This project uses the Kontur Disaster API for live hazard data and Leaflet.js for interactive mapping.</p>
+      <a href="https://github.com/yourusername/chat-app" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>Voice to Website Builder</h3>
+      <p>A platform for blind or otherwise, disabled users to create a website, 
+        through verbal communication. Can also be used for general convenience.</p>
+      <a href="https://danielhyman123.github.io/Voice-to-website_builder/" target="_blank">Link to Platform</a>
+        <a href="https://github.com/danielHyman123/Voice-to-website_builder" target="_blank">View on Github</a>
+
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Your Name | <a href="https://github.com/yourusername" style="color:#64ffda;">GitHub</a> | <a href="mailto:youremail@example.com" style="color:#64ffda;">Email</a></p>
+    <p>
+        <a href="mailto:danielHyman20@gmail.com">Email</a> |
+        <a href="https://github.com/danielHyman123" target="_blank">GitHub</a> | 
+        <a href="https://linkedin.com/in/d-hyman" target="_blank">LinkedIn</a>
+    </p>
   </footer>
+  <script src="index.js"></script>
 </body>
 </html>
