@@ -1,4 +1,4 @@
-const texts = ["Systems Engineering Student", "Interest in Robotics", "CAD Software", "Web Development", "Mechatronics"];
+const texts = ["Systems Engineering Student", "Interest in Robotics", "CAD Software", "Mechatronics", "Web Development"];
 const textElement = document.getElementById('cyclingText');
 let currentIndex = 0;
 let isDeleting = false;
