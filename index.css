@@ -1,7 +1,5 @@
 /* Global Reset + Defaults */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -37,12 +35,12 @@ body {
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .hero p {
   font-size: 1.0rem;
-  margin: 0.5rem 0;
+  margin-top: 1.0rem;
 }
 
 .hero a {
@@ -52,20 +50,36 @@ body {
   font-weight: bold;
 }
 
-/* Header */
+/* Header - Fixed positioning issues */
 header {
-  background: linear-gradient(135deg,  #112746, #020710);
+  background: linear-gradient(135deg, #112746, #020710);
   border: 3px solid #64ffda; /* solid border */
   border-radius: 12px;
   color: #fff;
   padding: 1rem;
   text-align: center;
-  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem auto; /* Fixed: moved margin-bottom here */
+  /* Add backdrop for better visibility when scrolling */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Wrapper for header to center it properly */
+.header-wrapper {
   position: sticky;
   top: 0;
   z-index: 999;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem; /* Add some padding for mobile */
 }
 
 nav a {
@@ -73,6 +87,10 @@ nav a {
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* Sections */
@@ -89,28 +107,34 @@ nav a {
 }
 
 #rotating-text {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 50px;
-    opacity: 1;
-    transition: opacity 0.8s ease-in-out; /* <-- add transition */
-
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
 }
+
 .fade-out {
-      opacity: 0;
+  opacity: 0;
 }
 
-.about-me{
+.about-me {
   color: #fff;
   padding: 1rem;
   text-align: center;
   margin-bottom: 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.downArrow {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.downArrow:hover {
+     transform: translateY(-8px);
 }
 
 .project {
@@ -148,43 +172,68 @@ footer {
 footer a {
   color: #64ffda;
   text-decoration: none;
-}  
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 .cycling-text {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    min-height: 1.2em;
-    position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-height: 1.2em;
+  position: relative;
 }
 
 .cycling-text::after {
-    content: '|';
-    color: white;
-    animation: blink 1s infinite;
-    margin-left: 2px;
+  content: '|';
+  color: white;
+  animation: blink 1s infinite;
+  margin-left: 2px;
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .cycling-text {
-        font-size: 2.5rem;
-    }
+  header {
+    border-radius: 8px;
+    max-width: calc(100% - 2rem);
+    padding: 0.8rem;
+  }
+  
+  body {
+    padding-top: 70px; /* Adjust for smaller header on mobile */
+  }
+  
+  .cycling-text {
+    font-size: 2.5rem;
+  }
+  
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .cycling-text {
-        font-size: 2rem;
-    }
+  header {
+    padding: 0.8rem;
+    border-radius: 6px;
+    max-width: calc(100% - 1rem);
+  }
+  
+  body {
+    padding-top: 65px; /* Adjust for even smaller header */
+  }
+  
+  .cycling-text {
+    font-size: 2rem;
+  }
+  
+  nav a {
+    margin: 0 0.3rem;
+    font-size: 0.85rem;
+  }
 }
