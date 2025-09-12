@@ -199,6 +199,14 @@ footer a {
   margin-left: 2px;
 }
 
+#img{
+  max-width:10;
+  max-height:10;
+}
+
+
+
+
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
@@ -258,3 +266,4 @@ footer a {
     gap: 1rem;
   }
 }
+
